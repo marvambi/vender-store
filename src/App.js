@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
 function App() {
   
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Link to={"/home"}>Home</Link>} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Link to={"/login"}>Login</Link>} />
         <Route path="/register" element={<Link to={"/register"}>Register</Link>} />
 
