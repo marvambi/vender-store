@@ -45,9 +45,11 @@ const Register = () => {
     }
 
     const userData = {
-      fullName: name,
+      username: name,
       email,
       password,
+      enabled: true,
+      deposit: 0,
       role: role
     };
     setIsLoading(true);
@@ -75,7 +77,7 @@ const Register = () => {
           <form onSubmit={register}>
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Username"
               required
               name="name"
               value={name}
@@ -106,8 +108,8 @@ const Register = () => {
               onChange={handleInputChange}
             />
             <select name="role" id="role" value={role} onChange={handleInputChange}>
-              <option value="63e3cdedc7615988979ac07a">SUPER_ADMIN</option>
-              <option value="63e3cdd5c7615988979ac076">USER</option>
+              <option value="seller">Seller</option>
+              <option value="buyer">Buyer</option>
             </select>
             <button type="submit" className="--btn --btn-primary --btn-block">
               Register
